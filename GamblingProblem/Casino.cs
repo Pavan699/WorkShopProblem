@@ -10,7 +10,7 @@ namespace GamblingProblem
         public void Bet()
         {
             int One_Day_Stack = 100;
-
+            int Bet = 1;
             int bet_Count = 0;
             int def_Count = 1;
             while (def_Count == 1)
@@ -22,16 +22,17 @@ namespace GamblingProblem
                 {
                     case 1:
                         Console.WriteLine("User Bet on one Game.");
-                        One_Day_Stack = One_Day_Stack - 1;
+                        One_Day_Stack = One_Day_Stack - Bet;
                         Console.WriteLine("Current One Day Stake is : " + One_Day_Stack);
                         bet_Count++;
                         break;
                     default:
-                        Console.WriteLine("Wronge Input :)");
+                        Console.WriteLine("Thank You for Playing :)");
                         def_Count++;
                         break;
                 }
             }
+            Console.WriteLine("Count of Bet is : "+bet_Count);
         }
     }
 }
