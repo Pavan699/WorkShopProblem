@@ -8,7 +8,8 @@ namespace GamblingProblem
         {
             Console.WriteLine("++++++++++++++++++++Welcome to the Gambling Simulation+++++++++++++++++");
             Casino casino = new Casino();
-            casino.Bet();
+            //casino.Bet();
+            casino.Stake50();
         }
     }
 }
