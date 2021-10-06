@@ -22,8 +22,18 @@ namespace GamblingProblem
                 {
                     case 1:
                         Console.WriteLine("User Bet on one Game.");
-                        One_Day_Stack = One_Day_Stack - Bet;
-                        Console.WriteLine("Current One Day Stake is : " + One_Day_Stack);
+                        Random random = new Random();
+                        int Bet_Game = random.Next(0, 2);
+                        if (Bet_Game == 0)
+                        {
+                            One_Day_Stack = One_Day_Stack - Bet;
+                            Console.WriteLine("Player Lose the Game and Stake is : " + One_Day_Stack);
+                        }
+                        else
+                        {
+                            One_Day_Stack = One_Day_Stack + Bet;
+                            Console.WriteLine("Player Win the Game and Stake is : " + One_Day_Stack);
+                        }
                         bet_Count++;
                         break;
                     default:
