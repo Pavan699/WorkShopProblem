@@ -6,12 +6,13 @@ namespace GamblingProblem
 {
     public class Casino
     {
+       
         public void Stake50()
         {
             int One_Day_Stack = 100;
             int Bet = 1;
-            int loseStake = 50;
-            int wonStake = 150;
+            double loseStake = One_Day_Stack * (0.5) ;//50% => 50/100 = 0.5(Lose 50%)
+            double wonStake = One_Day_Stack * (1.5);//150% => 150/100 = 1.5(Won extra 50%)
 
             while(One_Day_Stack != loseStake && One_Day_Stack != wonStake)
             {
@@ -35,7 +36,7 @@ namespace GamblingProblem
             }
             else { Console.WriteLine("User Won the Extra 50% stake"); }
         }
-        public void Bet()
+        public void Betting()
         {
             int One_Day_Stack = 100;
             int Bet = 1;
@@ -43,7 +44,7 @@ namespace GamblingProblem
             int def_Count = 1;
             while (def_Count == 1 && One_Day_Stack > 0)
             {
-                Console.Write("Enter the 1.Bet On one Game \t 2.To Exit : ");
+                Console.WriteLine("Enter the 1.Bet On one Game \t 2.To Exit : ");
                 Console.WriteLine("Enter The Choice : ");
                 int choice = Convert.ToInt32(Console.ReadLine());
 
